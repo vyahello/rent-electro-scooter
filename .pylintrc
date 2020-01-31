@@ -53,7 +53,8 @@ confidence=
 # --disable=W"
 
 disable=missing-class-docstring, missing-function-docstring,
-        missing-module-docstring, global-statement, no-name-in-module
+        missing-module-docstring, global-statement, no-name-in-module,
+        invalid-name, too-few-public-methods, unnecessary-pass
 
 [REPORTS]
 
