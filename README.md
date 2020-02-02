@@ -24,7 +24,7 @@
   - [flake8](http://flake8.pycqa.org/en/latest/)
 
 ## Usage
-![Demo](demo.gif)
+![Demo](usage.gif)
 
 ### Installation
 
@@ -36,7 +36,6 @@ Please run following script to obtain latest package from PYPI:
 Then please launch following tool from your environment:
 ```bash
 ➜ scooter-rental
-...
 ```
 
 ### Source code
@@ -45,7 +44,6 @@ To be able to run source code please execute command below:
 
 ```bash
 ➜ python -m scooter
-...
 ```
 
 ## Development notes
