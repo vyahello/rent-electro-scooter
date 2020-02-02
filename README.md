@@ -5,8 +5,8 @@
 [![Stars](https://img.shields.io/github/stars/vyahello/rent-electro-scooter)](https://github.com/vyahello/rent-electro-scooter/stargazers)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
 
-[![PyPI version shields.io](https://img.shields.io/pypi/v/rent-electro-scooter.svg)](https://pypi.python.org/pypi/rent-electro-scooter/)
-[![PyPI pyversions](https://img.shields.io/pypi/pyversions/rent-electro-scooter.svg)](https://pypi.python.org/pypi/rent-electro-scooter/)
+[![PyPI version shields.io](https://img.shields.io/pypi/v/scooter-rental.svg)](https://pypi.org/project/scooter-rental/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/scooter-rental.svg)](https://pypi.org/project/scooter-rental/)
 
 # Rent electro scooter
 
