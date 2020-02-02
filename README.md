@@ -1,7 +1,6 @@
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Build Status](https://travis-ci.org/vyahello/rent-electro-scooter.svg?branch=master)](https://travis-ci.org/vyahello/rent-electro-scooter)
-[![Coverage Status](https://coveralls.io/repos/github/vyahello/rent-electro-scooter/badge.svg?branch=master)](https://coveralls.io/github/vyahello/rent-electro-scooter?branch=master)
 [![Forks](https://img.shields.io/github/forks/vyahello/rent-electro-scooter)](https://github.com/vyahello/rent-electro-scooter/network/members)
 [![Stars](https://img.shields.io/github/stars/vyahello/rent-electro-scooter)](https://github.com/vyahello/rent-electro-scooter/stargazers)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
