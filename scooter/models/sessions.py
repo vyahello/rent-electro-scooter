@@ -1,16 +1,17 @@
 from sqlalchemy import create_engine
+from sqlalchemy.engine import Engine
 from sqlalchemy.orm import Session, sessionmaker
 from scooter.database.storage import full_path
 
-__engine = None
-__factory = None
+__engine: Engine = None
+__factory: sessionmaker = None
 
 
 class InitError(Exception):
     """Represents session exception."""
 
-    def __init__(self) -> None:
-        super().__init__("You have not created global init")
+    def __init__(self, name: str) -> None:
+        super().__init__(f"You have not created global init for {name} target")
 
 
 def global_init(database_name: str) -> None:
@@ -28,11 +29,11 @@ def global_init(database_name: str) -> None:
 def create_tables() -> None:
     """Create database tables."""
     if not __engine:
-        raise InitError
+        raise InitError(name="tables")
 
     # noinspection PyUnresolvedReferences
     import scooter.models.__models  # noqa: F401, pylint: disable=import-outside-toplevel
-    from scooter.models.base import BaseModel  # pylint: disable=import-outside-toplevel
+    from scooter.models import BaseModel  # pylint: disable=import-outside-toplevel
 
     BaseModel.metadata.create_all(__engine)
 
@@ -40,7 +41,7 @@ def create_tables() -> None:
 def create_session() -> Session:
     """Create database session."""
     if not __factory:
-        raise InitError
+        raise InitError(name="session")
 
     session: Session = __factory()
     session.expire_on_commit = False

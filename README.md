@@ -6,6 +6,9 @@
 [![Stars](https://img.shields.io/github/stars/vyahello/rent-electro-scooter)](https://github.com/vyahello/rent-electro-scooter/stargazers)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
 
+[![PyPI version shields.io](https://img.shields.io/pypi/v/rent-electro-scooter.svg)](https://pypi.python.org/pypi/rent-electro-scooter/)
+[![PyPI pyversions](https://img.shields.io/pypi/pyversions/rent-electro-scooter.svg)](https://pypi.python.org/pypi/rent-electro-scooter/)
+
 # Rent electro scooter
 
 > This is a regular CLI application for renting electro-scooters. 
@@ -22,20 +25,47 @@
   - [flake8](http://flake8.pycqa.org/en/latest/)
 
 ## Usage
+```bash
+****************************************************************************************************
+******************************** Electro scooter rental application ********************************
+****************************************************************************************************
+
+Please choose a command, [r]ent, [a]vailable, [l]ocate, [h]istory, [q]uit:
+```
 
 ## Installation
 
-TBD
+Please run following script to obtain latest package from PYPI:
+```bash
+➜ pip install scooter-rental
+```
+
+Then please launch following tool from your environment:
+```bash
+➜ scooter-rental
+...
+```
 
 ## Source code
 
-TBD
+To be able to run source code please execute command below:
+
+```bash
+➜ python -m scooter
+...
+```
 
 ## Development notes
 
 ### CI
 
-TBD
+Project has Travis CI integration using [.travis.yml](.travis.yml) file thus code analysis (`black`, `pylint`, `flake8`) and unittests (`pytest`) will be run automatically
+after every made change to the repository.
+
+To be able to run code analysis, please execute command below:
+```bash
+➜ ./analyse-code.sh
+```
 
 ### Release notes
 

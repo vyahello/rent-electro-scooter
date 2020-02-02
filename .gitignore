@@ -28,3 +28,6 @@ assets/
 dist/
 build/
 *.egg-info
+
+# database
+*.sqlite

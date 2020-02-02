@@ -1,7 +1,7 @@
 from datetime import datetime
 from sqlalchemy import Column, Integer, DateTime, String
 from sqlalchemy.orm import relation
-from scooter.models.base import BaseModel
+from scooter.models import BaseModel
 from scooter.models.rentals import Rental
 
 
@@ -18,4 +18,4 @@ class User(BaseModel):
     hashed_password: Column = Column(String, nullable=True, index=True)
     created_date: Column = Column(DateTime, default=datetime.now, index=True)
     last_login: Column = Column(DateTime, default=datetime.now, index=True)
-    rentals = relation("Rentals", order_by=[Rental.start_time.desc()], back_populates="user")
+    rentals = relation("Rental", order_by=[Rental.start_time.desc()], back_populates="user")

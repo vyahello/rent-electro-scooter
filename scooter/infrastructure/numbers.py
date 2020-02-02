@@ -1,4 +1,4 @@
-def make_int(text: int, default: int = -1) -> int:
+def make_int(text: str, default: int = -1) -> int:
     """Converts text into integer."""
     try:
         return int(text)

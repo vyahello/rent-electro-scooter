@@ -1,7 +1,7 @@
 from datetime import datetime
 from sqlalchemy import Column, Integer, DateTime, String
 from sqlalchemy.orm import relation
-from scooter.models.base import BaseModel
+from scooter.models import BaseModel
 
 
 class Location(BaseModel):
@@ -17,4 +17,4 @@ class Location(BaseModel):
     city: Column = Column(String, index=True)
     state: Column = Column(String, index=True)
     max_storage = Column(Integer, index=True)
-    scooters = relation("Scooter", back_polulates="location")
+    scooters = relation("Scooter", back_populates="location")
