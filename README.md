@@ -24,15 +24,9 @@
   - [flake8](http://flake8.pycqa.org/en/latest/)
 
 ## Usage
-```bash
-****************************************************************************************************
-******************************** Electro scooter rental application ********************************
-****************************************************************************************************
+![Demo](demo.gif)
 
-Please choose a command, [r]ent, [a]vailable, [l]ocate, [h]istory, [q]uit:
-```
-
-## Installation
+### Installation
 
 Please run following script to obtain latest package from PYPI:
 ```bash
@@ -45,7 +39,7 @@ Then please launch following tool from your environment:
 ...
 ```
 
-## Source code
+### Source code
 
 To be able to run source code please execute command below:
 

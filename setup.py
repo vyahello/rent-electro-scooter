@@ -17,7 +17,7 @@ def __requirements() -> Sequence[str]:
 if __name__ == "__main__":
     __compose_package(
         name="scooter-rental",
-        version="0.0.1",
+        version="0.0.2",
         author="Volodymyr Yahello",
         author_email="vyahello@gmail.com",
         description="A command line application for renting electro-scooters. Just try it, it is fun :)",
