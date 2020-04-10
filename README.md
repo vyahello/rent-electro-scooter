@@ -4,9 +4,9 @@
 [![Forks](https://img.shields.io/github/forks/vyahello/rent-electro-scooter)](https://github.com/vyahello/rent-electro-scooter/network/members)
 [![Stars](https://img.shields.io/github/stars/vyahello/rent-electro-scooter)](https://github.com/vyahello/rent-electro-scooter/stargazers)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
-
 [![PyPI version shields.io](https://img.shields.io/pypi/v/scooter-rental.svg)](https://pypi.org/project/scooter-rental/)
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/scooter-rental.svg)](https://pypi.org/project/scooter-rental/)
+[![Downloads](https://pepy.tech/badge/scooter-rental)](https://pepy.tech/project/scooter-rental)
 
 # Rent electro scooter
 
@@ -30,12 +30,12 @@
 
 Please run following script to obtain latest package from PYPI:
 ```bash
-➜ pip install scooter-rental
+pip install scooter-rental
 ```
 
 Then please launch following tool from your environment:
 ```bash
-➜ scooter-rental
+scooter-rental
 ```
 
 ### Source code
@@ -43,7 +43,7 @@ Then please launch following tool from your environment:
 To be able to run source code please execute command below:
 
 ```bash
-➜ python -m scooter
+python -m scooter
 ```
 
 ## Development notes
@@ -55,7 +55,7 @@ after every made change to the repository.
 
 To be able to run code analysis, please execute command below:
 ```bash
-➜ ./analyse-code.sh
+./analyse-code.sh
 ```
 
 ### Release notes
@@ -64,7 +64,7 @@ Please check [changelog](CHANGELOG.md) file to get more details about actual ver
 
 ### Meta
 
-Author – Volodymyr Yahello
+Author – _Volodymyr Yahello_
 
 Distributed under the `MIT` license. See [LICENSE](LICENSE.md) for more information.
 
