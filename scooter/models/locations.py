@@ -16,5 +16,6 @@ class Location(BaseModel):
     street: Column = Column(String)
     city: Column = Column(String, index=True)
     state: Column = Column(String, index=True)
+    postal: Column = Column(String, index=True)
     max_storage = Column(Integer, index=True)
     scooters = relation("Scooter", back_populates="location")

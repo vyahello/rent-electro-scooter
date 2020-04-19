@@ -16,7 +16,8 @@
 
 ## Tools
 - python 3.6 | 3.7 | 3.8
-- [sqlalchemy](https://www.sqlalchemy.org)
+- [sqlalchemy](https://www.sqlalchemy.org) database
+- [alembic](https://alembic.sqlalchemy.org/en/latest/) database migration
 - code analysis
   - [pytest](https://pypi.org/project/pytest/)
   - [black](https://black.readthedocs.io/en/stable/)
@@ -43,6 +44,7 @@ scooter-rental
 To be able to run source code please execute command below:
 
 ```bash
+git@github.com:vyahello/rent-electro-scooter.git
 python -m scooter
 ```
 

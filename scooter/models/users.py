@@ -14,6 +14,7 @@ class User(BaseModel):
     __tablename__: str = "users"
     id: Column = Column(Integer, primary_key=True, autoincrement=True)
     name: Column = Column(String, nullable=True)
+    gender: Column = Column(String, nullable=True)
     email: Column = Column(String, index=True, nullable=True, unique=True)
     hashed_password: Column = Column(String, nullable=True, index=True)
     created_date: Column = Column(DateTime, default=datetime.now, index=True)
