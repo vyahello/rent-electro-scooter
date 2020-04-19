@@ -50,6 +50,17 @@ python -m scooter
 
 ## Development notes
 
+### Database migration
+
+For database migrations [alembic](https://alembic.sqlalchemy.org/en/latest/) package is used. Please follow [alembic.ini](alembic.ini) file for instructions.
+
+Once new changes were made to the database, please follow instructions below:
+```bash
+alembic revision --autogenerate -m "commit message"
+alembic upgrade head
+alembic current
+```
+
 ### CI
 
 Project has Travis CI integration using [.travis.yml](.travis.yml) file thus code analysis (`black`, `pylint`, `flake8`) and unittests (`pytest`) will be run automatically
