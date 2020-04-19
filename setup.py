@@ -1,5 +1,6 @@
 from typing import IO, Sequence
 from setuptools import setup as __compose_package, find_packages as __find_packages
+from scooter import __author__, __email__, __version__, __package_name__
 
 
 def __description() -> str:
@@ -16,10 +17,10 @@ def __requirements() -> Sequence[str]:
 
 if __name__ == "__main__":
     __compose_package(
-        name="scooter-rental",
-        version="0.0.2",
-        author="Volodymyr Yahello",
-        author_email="vyahello@gmail.com",
+        name=__package_name__,
+        version=__version__,
+        author=__author__,
+        author_email=__email__,
         description="A command line application for renting electro-scooters. Just try it, it is fun :)",
         long_description=__description(),
         long_description_content_type="text/markdown",

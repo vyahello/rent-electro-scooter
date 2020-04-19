@@ -1,3 +1,11 @@
+Versions
+========
+
+0.0.3 (2020-04-19)
+========
+- Implement 'alembic' data migration
+- Track package downloads
+
 0.0.2 (2020-02-03)
 ========
 - Demonstrate usage of a tool
