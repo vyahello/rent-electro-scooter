@@ -15,7 +15,7 @@
 > It uses **SQLAlchemy** API as a database core with ORM (Object Relational Mapper) support.
 
 ## Tools
-- python 3.6 | 3.7 | 3.8
+- python 3.6, 3.7, 3.8
 - [sqlalchemy](https://www.sqlalchemy.org) database
 - [alembic](https://alembic.sqlalchemy.org/en/latest/) database migration
 - code analysis
