@@ -1,3 +1,5 @@
+![Screenshot](logo.png)
+
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Build Status](https://travis-ci.org/vyahello/rent-electro-scooter.svg?branch=master)](https://travis-ci.org/vyahello/rent-electro-scooter)
@@ -13,14 +15,17 @@
 > It uses **SQLAlchemy** API as a database core with ORM (Object Relational Mapper) support.
 
 ## Tools
+
+### Production
 - python 3.6, 3.7, 3.8
 - [sqlalchemy](https://www.sqlalchemy.org) database
 - [alembic](https://alembic.sqlalchemy.org/en/latest/) database migration
-- code analysis
-  - [pytest](https://pypi.org/project/pytest/)
-  - [black](https://black.readthedocs.io/en/stable/)
-  - [pylint](https://www.pylint.org/)
-  - [flake8](http://flake8.pycqa.org/en/latest/)
+
+### Development
+- [pytest](https://pypi.org/project/pytest/)
+- [black](https://black.readthedocs.io/en/stable/)
+- [pylint](https://www.pylint.org/)
+- [flake8](http://flake8.pycqa.org/en/latest/)
 
 ## Usage
 ![Demo](usage.gif)
