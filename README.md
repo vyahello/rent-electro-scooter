@@ -6,6 +6,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
 [![PyPI version shields.io](https://img.shields.io/pypi/v/scooter-rental.svg)](https://pypi.org/project/scooter-rental/)
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/scooter-rental.svg)](https://pypi.org/project/scooter-rental/)
+[![PyPi downloads](https://img.shields.io/pypi/dm/scooter-rental.svg)](https://pypi.python.org/pypi/scooter-rental)
 [![Downloads](https://pepy.tech/badge/scooter-rental)](https://pepy.tech/project/scooter-rental)
 
 # Rent electro scooter
