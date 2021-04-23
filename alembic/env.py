@@ -9,7 +9,9 @@ from sqlalchemy.sql.schema import MetaData
 from sqlalchemy.engine.base import Engine, Connection
 
 # locate 'scooter' package manually
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../')))
+sys.path.insert(
+    0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../"))
+)
 
 import scooter.models.__models
 from scooter.models import BaseModel
@@ -45,11 +47,15 @@ def __run_migrations_online() -> None:
     and associate a connection with the context.
     """
     connectable: Engine = engine_from_config(
-        config.get_section(config.config_ini_section), prefix="sqlalchemy.", poolclass=pool.NullPool,
+        config.get_section(config.config_ini_section),
+        prefix="sqlalchemy.",
+        poolclass=pool.NullPool,
     )
 
     with connectable.connect() as connection:  # type: Connection
-        context.configure(connection=connection, target_metadata=target_metadata)
+        context.configure(
+            connection=connection, target_metadata=target_metadata
+        )
 
         with context.begin_transaction():
             context.run_migrations()

@@ -88,17 +88,27 @@ def __import_rentals() -> None:
     scooters: List[Scooter] = list(session.query(Scooter))
     locations: List[Scooter] = list(session.query(Location))
     user: User = default_user()
-    user2: User = session.query(User).filter(User.email == "user@gmail.com").one()
+    user2: User = (
+        session.query(User).filter(User.email == "user@gmail.com").one()
+    )
 
     for _ in range(1, 3):
         selected: Scooter = choice(scooters)
-        book_scooter(scooter=selected, user=user, start_data=datetime.now() - timedelta(days=randint(1, 100)))
+        book_scooter(
+            scooter=selected,
+            user=user,
+            start_data=datetime.now() - timedelta(days=randint(1, 100)),
+        )
         scooters.remove(selected)
         part_scooter(selected.id, choice(locations).id)
 
     for _ in range(1, 10):
         selected = choice(scooters)
-        book_scooter(scooter=selected, user=user2, start_data=datetime.now() - timedelta(days=randint(1, 100)))
+        book_scooter(
+            scooter=selected,
+            user=user2,
+            start_data=datetime.now() - timedelta(days=randint(1, 100)),
+        )
         scooters.remove(selected)
 
 

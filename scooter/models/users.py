@@ -19,4 +19,6 @@ class User(BaseModel):
     hashed_password: Column = Column(String, nullable=True, index=True)
     created_date: Column = Column(DateTime, default=datetime.now, index=True)
     last_login: Column = Column(DateTime, default=datetime.now, index=True)
-    rentals = relation("Rental", order_by=[Rental.start_time.desc()], back_populates="user")
+    rentals = relation(
+        "Rental", order_by=[Rental.start_time.desc()], back_populates="user"
+    )

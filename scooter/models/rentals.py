@@ -16,6 +16,8 @@ class Rental(BaseModel):
     start_time: Column = Column(DateTime, default=datetime.now, index=True)
     end_time: Column = Column(DateTime, index=True)
     user_id: Column = Column(Integer, ForeignKey("users.id"), nullable=False)
-    scooter_id: Column = Column(String, ForeignKey("scooters.id"), nullable=False)
+    scooter_id: Column = Column(
+        String, ForeignKey("scooters.id"), nullable=False
+    )
     user = relation("User", back_populates="rentals")
     scooter = relation("Scooter")

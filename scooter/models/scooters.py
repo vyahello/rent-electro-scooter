@@ -16,5 +16,7 @@ class Scooter(BaseModel):
     vin: Column = Column(String, index=True, unique=True)
     model: Column = Column(String, index=True)
     battery_level: Column = Column(Integer, index=True)
-    location_id: Column = Column(Integer, ForeignKey("location.id"), nullable=True)
+    location_id: Column = Column(
+        Integer, ForeignKey("location.id"), nullable=True
+    )
     location = relation("Location")

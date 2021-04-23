@@ -33,7 +33,9 @@ def create_tables() -> None:
 
     # noinspection PyUnresolvedReferences
     import scooter.models.__models  # noqa: F401, pylint: disable=import-outside-toplevel
-    from scooter.models import BaseModel  # pylint: disable=import-outside-toplevel
+    from scooter.models import (
+        BaseModel,
+    )  # pylint: disable=import-outside-toplevel
 
     BaseModel.metadata.create_all(__engine)
 

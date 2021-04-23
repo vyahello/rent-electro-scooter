@@ -7,7 +7,12 @@ from scooter.infrastructure.switch import Switch
 from scooter.models.scooters import Scooter
 from scooter.models.sessions import create_tables, global_init
 from scooter.models.users import User
-from scooter.services.service import default_user, parked_scooters, book_scooter, rented_scooters
+from scooter.services.service import (
+    default_user,
+    parked_scooters,
+    book_scooter,
+    rented_scooters,
+)
 
 user: User = None
 
@@ -20,7 +25,10 @@ def launch_scooter_rental() -> None:
     print(f"{f' Electro scooter rental application ':*^100}")
     print(f"{f'':*^100}")
     print()
-    options: str = "Please choose a command, [r]ent, [a]vailable, [l]ocate, [h]istory, [q]uit: "
+    options: str = (
+        "Please choose a command, "
+        "[r]ent, [a]vailable, [l]ocate, [h]istory, [q]uit: "
+    )
     command: str = "NOT SET"
 
     while command:
@@ -31,7 +39,9 @@ def launch_scooter_rental() -> None:
             switch.case("l", locate_scooters)
             switch.case("h", history)
             switch.case(["q", "e"], exit_application)
-            switch.default(lambda: print(f"Don't know what to do with {command} command."))
+            switch.default(
+                lambda: print(f"Don't know what to do with {command} command.")
+            )
 
 
 def setup_database() -> None:
@@ -49,10 +59,13 @@ def available_scooters(suppress_header: bool = False) -> List[Scooter]:
         print(f"{f' Available scooters ':*^100}")
 
     list_of_parked_scooters: List[Scooter] = parked_scooters()
-    for index, scooter in enumerate(list_of_parked_scooters, start=1):  # type: int, Scooter
+    for index, scooter in enumerate(
+        list_of_parked_scooters, start=1
+    ):  # type: int, Scooter
         print(
             f"#{index}. Loc: {scooter.location.street} {scooter.location.city}, "
-            f"{scooter.id} {scooter.model} VIN: {scooter.vin} with battery level {scooter.battery_level}%"
+            f"{scooter.id} {scooter.model} VIN: "
+            f"{scooter.vin} with battery level {scooter.battery_level}%"
         )
     print()
     return list_of_parked_scooters
@@ -81,7 +94,10 @@ def locate_scooters() -> None:
 
     print(f"Out with clients [{len(list_of_rented_scooters)} scooters]:")
     for rented in list_of_rented_scooters:  # type: Scooter
-        print(f" {rented.id} {rented.model} VIN: {rented.vin} with battery level {rented.battery_level}%")
+        print(
+            f" {rented.id} {rented.model} VIN: "
+            f"{rented.vin} with battery level {rented.battery_level}%"
+        )
 
     print()
 
@@ -89,7 +105,8 @@ def locate_scooters() -> None:
     for parked in list_of_parked_scooters:  # type: Scooter
         print(
             f"Location: {parked.location.street} {parked.location.city}, "
-            f"{parked.id} {parked.model} VIN: {parked.vin} with battery level {parked.battery_level}%"
+            f"{parked.id} {parked.model} VIN: "
+            f"{parked.vin} with battery level {parked.battery_level}%"
         )
 
 
@@ -98,7 +115,9 @@ def history() -> None:
     print(f"{f' Your rental history  ':*^100}")
     local: User = default_user()
     for rental in local.rentals:
-        print(f" * {rental.start_time.date().isoformat()} {rental.scooter.model}")
+        print(
+            f" * {rental.start_time.date().isoformat()} {rental.scooter.model}"
+        )
 
 
 def exit_application():

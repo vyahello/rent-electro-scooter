@@ -23,7 +23,9 @@ class Switch(ContextManager["Switch"]):
     def default(self, func: Callable[[], Any]) -> None:
         self.case(Switch.__default, func)
 
-    def case(self, key, func: Callable[[], Any], fallthrough: bool = False):  # noqa: C901
+    def case(  # noqa: C901
+        self, key, func: Callable[[], Any], fallthrough: bool = False
+    ):
         if fallthrough is not None:
             if self._falling_through:
                 self._func_stack.append(func)
@@ -62,7 +64,10 @@ class Switch(ContextManager["Switch"]):
             raise exc_val
 
         if not self._func_stack:
-            raise ValueError(f"Value does not match any case and there is not default case: value {self.value}")
+            raise ValueError(
+                "Value does not match any case and there is "
+                f"not default case: value {self.value}"
+            )
 
         for func in self._func_stack:
             self.__result = func()
@@ -70,7 +75,10 @@ class Switch(ContextManager["Switch"]):
     @property
     def result(self):
         if self.__result == Switch.__no_result:
-            raise ValueError("No result has been computed (did you access Switch.result inside the with block?)")
+            raise ValueError(
+                "No result has been computed (did you access "
+                "Switch.result inside the with block?)"
+            )
         return self.__result
 
 

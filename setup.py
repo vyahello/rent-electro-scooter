@@ -1,5 +1,8 @@
 from typing import IO, Sequence
-from setuptools import setup as __compose_package, find_packages as __find_packages
+from setuptools import (
+    setup as __compose_package,
+    find_packages as __find_packages,
+)
 from scooter import __author__, __email__, __version__, __package_name__
 
 
@@ -25,7 +28,9 @@ if __name__ == "__main__":
         long_description=__description(),
         long_description_content_type="text/markdown",
         url="https://github.com/vyahello/rent-electro-scooter",
-        packages=__find_packages(exclude=("*.tests", "*.tests.*", "tests.*", "tests")),
+        packages=__find_packages(
+            exclude=("*.tests", "*.tests.*", "tests.*", "tests")
+        ),
         include_package_data=True,
         install_requires=__requirements(),
         classifiers=(
@@ -36,5 +41,9 @@ if __name__ == "__main__":
             "Operating System :: OS Independent",
         ),
         python_requires=">=3.6",
-        entry_points={"console_scripts": ("scooter-rental = scooter.__main__:launch_scooter_rental",)},
+        entry_points={
+            "console_scripts": (
+                "scooter-rental = scooter.__main__:launch_scooter_rental",
+            )
+        },
     )

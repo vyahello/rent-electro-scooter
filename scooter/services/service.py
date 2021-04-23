@@ -52,9 +52,19 @@ def part_scooter(scooter_id: int, location_id: int) -> Scooter:
 
 def rented_scooters() -> List[Scooter]:
     """Returns list of rented scooters."""
-    return list(create_session().query(Scooter).filter(Scooter.location_id == None).all())  # noqa: E711
+    return list(
+        create_session()
+        .query(Scooter)
+        .filter(Scooter.location_id == None)
+        .all()
+    )  # noqa: E711
 
 
 def parked_scooters() -> List[Scooter]:
     """Returns list of parked scooters."""
-    return list(create_session().query(Scooter).filter(Scooter.location_id != None).all())  # noqa: E711
+    return list(
+        create_session()
+        .query(Scooter)
+        .filter(Scooter.location_id != None)
+        .all()
+    )  # noqa: E711
